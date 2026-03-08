@@ -5,9 +5,9 @@
   "type": "module",
   "main": "index.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc --outDir ./dist",
     "start": "node dist/index.js",
-    "dev": "nodemon index.ts "
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",

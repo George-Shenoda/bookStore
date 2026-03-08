@@ -17,7 +17,7 @@ const EditBooks = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`http://localhost:5555/books/${id}`)
+            .get(`${import.meta.env.VITE_MY_BACKEND}books/${id}`)
             .then((response) => {
                 setTitle(response.data.title);
                 setAuthor(response.data.author);
@@ -39,7 +39,7 @@ const EditBooks = () => {
         };
         setLoading(true);
         axios
-            .put(`http://localhost:5555/books/${id}`, data)
+            .put(`${import.meta.env.VITE_MY_BACKEND}books/${id}`, data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar("Book Edited Successfully", {

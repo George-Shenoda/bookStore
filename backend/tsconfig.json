@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
-        "rootDir": "./",
-        "outDir": "./build",
+        "target": "ESNext",
+        "module": "NodeNext", // This is the key for modern Node.js
+        "moduleResolution": "NodeNext",
+        "outDir": "./dist",
+        "rootDir": "./src", // Ensure this matches where your index.ts is
         "esModuleInterop": true,
         "strict": true,
-        "noEmit": true,
-        "allowImportingTsExtensions": true
+        "skipLibCheck": true
     }
 }
